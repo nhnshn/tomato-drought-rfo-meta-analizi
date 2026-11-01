@@ -1,0 +1,12 @@
+matrices/
+rep/matrices/
+de/
+de_leaf_*/
+meta/
+meta_*/
+genotype_results/
+figures/
+logs/
+rep/out/
+__pycache__/
+*.pyc

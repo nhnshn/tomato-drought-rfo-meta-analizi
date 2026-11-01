@@ -1,0 +1,16 @@
+denetim_bulgusu,doğrulama,kanıt
+Kontrast yönü (drought vs control) doğru tanımlanmış,doğru (hata değil),"03_de_per_study.py satır 77-79: DeseqStats(contrast=['group', lv_d, lv_c]). PyDESeq2'de sıra (değişken, test edilen, referans), yani pozitif katsayı kuraklıkta yüksek ifade demek."
+~group katman içinde zaman/evre/genotip için düzeltmiyor,doğru,split_cols=['tissue_h'] varsayılanında group = tissue_h + treatment_class; katman içinde tüm kuraklık örnekleri tek düzey. Model çağrısı design='~group'.
+group_contrast_vector() tanımlı ama çağrılmıyor,doğru,"grep: tek eşleşme satır 18'deki def. Betiğin docstring'i 'explicit numeric contrast vector' diyor, gerçek çağrı liste kontrastı — belgelenen yöntem çalışan yöntem değil."
+Toplamı-sıfır kontrolü hatalı,doğru,"~group ile tasarım sütunları [intercept, group[T.drought]]; geçerli fark kontrastı [0,1] ve toplamı 1. Fonksiyon bunu reddederdi. Çağrılmadığı için sonuçları etkilemedi."
+PRJNA635375: kontroller yalnız başlangıç gününde,doğru,3 kontrol 0d; 15 kuraklık 1d-5d. Ortak zaman noktası yok.
+PRJNA624892: kontrol yalnız 0 saatte,doğru,"3 kontrol 0h; kuraklık 3h ve 6h. Saatlik tasarım, sirkadiyen etkiyle karışık."
+PRJNA947261: kontrol yalnız 0 saatte,doğru,3 kontrol 0h; dehidrasyon 2h ve 4h.
+PRJNA592330: S3 evresinde 3v3 ortak karşılaştırma var,doğru,"Kontroller S1/S2/S3 (3+3+3), kuraklık S3/S4 (3+3). Eski model 9 kontrolü (21-31 gün) havuzluyordu."
+"PRJNA657834: kuraklık yalnız T1'de, kontroller T0/T1/T2'ye yayılmış",doğru,"6 kontrol her zaman noktasında, 6 kuraklık yalnız T1. Eski model 18 kontrol vs 6 kuraklık."
+"PRJNA644865 ve PRJNA472702 genotip paneli, hücre başına tek kütüphane",doğru,"PRJNA644865: 8 genotip x 2 koşul x 2 doku, her hücrede 1 kütüphane. PRJNA472702: 3 genotip (Cervil/Levovil/F1) aynı yapıda."
+Genotipi --split-by'a eklemek düzeltme ile aynı şey değil,doğru,"Betik split_cols üzerinden böler ve min-reps uygular; 1v1 hücreler eşiği geçemez, panel tümden düşer."
+PRJNA853266 meyve kolu altdokuları havuzluyor,doğru,"tissue alanı: Placenta/Columella/Pericarp/Jelly/Septum/Seeds, her biri 24 kütüphane; tek 36v108 katmanda birleştirilmiş."
+Yayımlanan ara çıktılar nihai koşu ile eşleşmiyor,doğru,"per_study_effects_long.csv.gz artefaktı 15 katman (13 yaprak) taşıyor; nihai koşu 30 katman (22 yaprak) ve meta_leafshoot/ içinde. Yayımlanan PRJNA947261_counts.csv.gz 8 sütun (3k/5d), nihai matris 9 sütun (3k/6d)."
+README örnek komutu nihai kök sonucunu üretmez,doğru,README satır 37: --min-studies 5; raporlanan kök analizi 4 katman. Parametreler çıktı başına kaydedilmemiş.
+lengthScaledTPM sayımlarını uzunluk offset'i olmadan kullanmak geçerli,doğru (hata değil),tximport'un lengthScaledTPM yolu zaten uzunluğu sayıma gömer; ek offset gerekmez. Kendi dönüştürme kodumuzun resmi tximport ile sayısal eşdeğerliği test edilmedi.

@@ -1,0 +1,15 @@
+name: tomato-drought-analysis
+channels: [conda-forge, bioconda]
+dependencies:
+  - python=3.11
+  - pandas
+  - numpy
+  - scipy
+  - statsmodels
+  - matplotlib
+  - diamond=2.1.9
+  - hmmer=3.4
+  - pip
+  - pip:
+      - pydeseq2==0.5.4
+      - pymare==0.0.13

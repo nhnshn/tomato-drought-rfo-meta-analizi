@@ -1,0 +1,50 @@
+id,document,locale,pattern,table,query,column,kind,tol
+en_genes,BMCPB_results_v1.md,en,"returned ([\d,]+) genes, of which",FROZEN_inference_summary.csv,model=='normal-z (DerSimonian-Laird tau2)' and scope=='genome-wide',n_tested,count,0
+en_dl,BMCPB_results_v1.md,en,"genes, of which (\d+) reached a Benjamini",FROZEN_inference_summary.csv,model=='normal-z (DerSimonian-Laird tau2)' and scope=='genome-wide',n_fdr05,count,0
+en_pm,BMCPB_results_v1.md,en,"Paule–Mandel estimator.{0,140}?leaves (\d+) genes at FDR",FROZEN_inference_summary.csv,model=='normal-z (Paule-Mandel tau2)',n_fdr05,count,0
+en_hksj,BMCPB_results_v1.md,en,with a smallest adjusted p of ([\d.]+),FROZEN_inference_summary.csv,model=='HKSJ' and scope=='genome-wide',smallest_bh,value,0.0005
+en_mhksj,BMCPB_results_v1.md,en,\(([\d.]+) under the modified variant,FROZEN_inference_summary.csv,model=='modified HKSJ',smallest_bh,value,0.0005
+en_panel_n,BMCPB_results_v1.md,en,restricted to the (\d+) testable panel genes,FROZEN_inference_summary.csv,scope=='panel' and model=='normal-z (DerSimonian-Laird tau2)',n_tested,count,0
+en_panel_sig,BMCPB_results_v1.md,en,One gene clears genome-wide FDR and (\w+) clear Benjamini,FROZEN_inference_summary.csv,scope=='panel' and model=='normal-z (DerSimonian-Laird tau2)',n_fdr05,count,0
+en_panel_hksj,BMCPB_results_v1.md,en,smallest within-panel adjusted p = ([\d.]+),FROZEN_inference_summary.csv,scope=='panel' and model=='HKSJ',smallest_bh,value,0.0005
+en_setmean,BMCPB_results_v1.md,en,the set mean of \+([\d.]+) sits,FROZEN_geneset_test.csv,gene_set=='rfo_biosynthetic',mean_pooled_log2FC,value,0.0005
+en_sd_raw,BMCPB_results_v1.md,en,sits ([\d.]+) SD above the null,FROZEN_geneset_test.csv,gene_set=='rfo_biosynthetic',sd_above_null,value,0.005
+en_nullsd,BMCPB_results_v1.md,en,"null mean −0\.014, SD ([\d.]+)",FROZEN_geneset_test.csv,gene_set=='rfo_biosynthetic',null_sd,value,0.0005
+en_vif,BMCPB_results_v1.md,en,VIF = 1 \+ \(\*m\* − 1\)·\*r̄\* = ([\d.]+),FROZEN_geneset_test.csv,gene_set=='rfo_biosynthetic',vif,value,0.005
+en_sd_vif,BMCPB_results_v1.md,en,falls from 8\.11 to \*\*([\d.]+) null standard deviations,FROZEN_geneset_test.csv,gene_set=='rfo_biosynthetic',sd_above_null_vif,value,0.005
+en_p_vif,BMCPB_results_v1.md,en,empirical \*\*p = ([\d.]+)\*\*,FROZEN_geneset_test.csv,gene_set=='rfo_biosynthetic',p_empirical_vif,value,0.0005
+en_gt8_mean,BMCPB_results_v1.md,en,gave a set mean of (−[\d.]+) across its four testable,FROZEN_geneset_test.csv,gene_set=='gt8_control',mean_pooled_log2FC,value,0.0005
+en_gols_bh,BMCPB_results_v1.md,en,galactinol synthase \| 3/4 \| \+1\.39 \| \+0\.51 \| 2\.02 \| \+3\.40 \| 0\.0117 \| \*\*([\d.]+)\*\*,FROZEN_geneset_test.csv,gene_set=='rfo_galactinol_synthase',p_bh_within_family,value,0.0005
+en_ag_bh,BMCPB_results_v1.md,en,also clear correction \(BH ([\d.]+)\),FROZEN_geneset_test.csv,gene_set=='rfo_alpha_galactosidase_catabolic',p_bh_within_family,value,0.0005
+en_imp1_fdr,BMCPB_results_v1.md,en,"Solyc04g014800, −0\.56, genome-wide FDR ([\d.]+)",FROZEN_panel_inference.csv,gene=='Solyc04g014800',bh_normal,value,0.0005
+en_coord_arm,BMCPB_results_v1.md,en,mean pairwise r = \+([\d.]+) over its 21 pairs,FROZEN_coordination_test.csv,gene_set=='rfo_biosynthetic',mean_pairwise_r,value,0.005
+en_coord_pairs,BMCPB_results_v1.md,en,over its (\d+) pairs against a null centred,FROZEN_coordination_test.csv,gene_set=='rfo_biosynthetic',n_pairs,count,0
+en_gols_coord_bh,BMCPB_results_v1.md,en,sit at \+0\.51 but do not clear correction \(BH ([\d.]+)\),FROZEN_coordination_test.csv,gene_set=='rfo_galactinol_synthase',p_bh_within_family,value,0.0005
+en_mips_coord,BMCPB_results_v1.md,en,"synthases are not \(\+0\.18, p = ([\d.]+)\)",FROZEN_coordination_test.csv,gene_set=='inositol_1P_synthase',p_bh_within_family,value,0.0005
+en_x_pairs,BMCPB_results_v1.md,en,over the (\d+) pairs with one gene in each,FROZEN_coordination_between_sets.csv,set_a=='rfo_galactinol_synthase',n_pairs,count,0
+en_cam_p,BMCPB_results_v1.md,en,combining to \*\*p = ([\d.]+)\*\*,FROZEN_rotation_combined.csv,gene_set=='rfo_biosynthetic' and cohort=='all strata',combined_p_up,value,0.0005
+en_moon_n,BMCPB_results_v1.md,en,"Of 5,681 meta-DEGs, ([\d,]+) were testable here",FROZEN_moon_metaDEG_summary.csv,subset=='all testable meta-DEGs',n,count,0
+en_moon_r,BMCPB_results_v1.md,en,Pearson r = \+([\d.]+) \(Spearman,FROZEN_moon_metaDEG_summary.csv,subset=='all testable meta-DEGs',pearson_r,value,0.0005
+en_moon_core,BMCPB_results_v1.md,en,to ([\d.]+)% over the 39 they designated,FROZEN_moon_metaDEG_summary.csv,subset=='their high-confidence core',pct_direction_agreement,value,0.05
+en_moon_core_sig,BMCPB_results_v1.md,en,"a high-confidence core, (\d+) of which also clear",FROZEN_moon_metaDEG_summary.csv,subset=='their high-confidence core',our_n_fdr05,count,0
+tr_genes,BULGULAR.md,tr,\*\*([\d.]+)\s*gen\*\* döndürdü,FROZEN_inference_summary.csv,model=='normal-z (DerSimonian-Laird tau2)' and scope=='genome-wide',n_tested,count,0
+tr_pm,BULGULAR.md,tr,Paule–Mandel τ² \| \*\*(\d+)\*\*,FROZEN_inference_summary.csv,model=='normal-z (Paule-Mandel tau2)',n_fdr05,count,0
+tr_hksj,BULGULAR.md,tr,"\| HKSJ \| \*\*0\*\* \| ([\d,]+) \|",FROZEN_inference_summary.csv,model=='HKSJ' and scope=='genome-wide',smallest_bh,value,0.0005
+tr_mhksj,BULGULAR.md,tr,"düzeltilmiş HKSJ \| 0 \| ([\d,]+) \|",FROZEN_inference_summary.csv,model=='modified HKSJ',smallest_bh,value,0.0005
+tr_panel_meas,BULGULAR.md,tr,Yirmi bir panel geninin \*\*(\d+)'u\*\* ölçülebilir,FROZEN_inference_summary.csv,scope=='panel' and model=='normal-z (DerSimonian-Laird tau2)',n_tested,count,0
+tr_sd_vif,BULGULAR.md,tr,"set 8,11.den \*\*([\d,]+) standart sapmaya",FROZEN_geneset_test.csv,gene_set=='rfo_biosynthetic',sd_above_null_vif,value,0.005
+tr_gt8_mean,BULGULAR.md,tr,"aynı arka plana karşı \*\*(−[\d,]+)\*\* verdi",FROZEN_geneset_test.csv,gene_set=='gt8_control',mean_pooled_log2FC,value,0.0005
+tr_ag_bh,BULGULAR.md,tr,"α-galaktosidazlar da düzeltmeyi geçiyor \(BH ([\d,]+)\)",FROZEN_geneset_test.csv,gene_set=='rfo_alpha_galactosidase_catabolic',p_bh_within_family,value,0.0005
+tr_imp1_fdr,BULGULAR.md,tr,"Solyc04g014800, −0,56, genom çapında FDR (\d+,\d+), panel",FROZEN_panel_inference.csv,gene=='Solyc04g014800',bh_normal,value,0.0005
+tr_gols_coord,BULGULAR.md,tr,"düzeltmeyi geçmiyor \(BH ([\d,]+)\)",FROZEN_coordination_test.csv,gene_set=='rfo_galactinol_synthase',p_bh_within_family,value,0.0005
+tr_arm_pairs,BULGULAR.md,tr,Kolun (\d+) çifti tam olarak,FROZEN_coordination_test.csv,gene_set=='rfo_biosynthetic',n_pairs,count,0
+tr_x_pairs,BULGULAR.md,tr,her birinden birer gen içeren (\d+) çift üzerinden,FROZEN_coordination_between_sets.csv,set_a=='rfo_galactinol_synthase',n_pairs,count,0
+tr_subgroup,BULGULAR.md,tr,"([\d.]+) genin [\d.]+.{1,2} yöntemler arasında",FROZEN_subgroup_stress_method.csv,,gene,rows,0
+tr_moon_core,BULGULAR.md,tr,"ilan ettikleri 39\s*gende \*\*%([\d,]+)\*\*",FROZEN_moon_metaDEG_summary.csv,subset=='their high-confidence core',pct_direction_agreement,value,0.05
+tr_coord_arm_r,BULGULAR.md,tr,"(\d+) çift üzerinden ortalama ikili r = \*\*\+0,57\*\*",FROZEN_coordination_test.csv,gene_set=='rfo_biosynthetic',n_pairs,count,0
+tr_coord_arm_bh,BULGULAR.md,tr,"6,0 boş sd, ampirik p = ([\d,]+)",FROZEN_coordination_test.csv,gene_set=='rfo_biosynthetic',p_bh_within_family,value,0.0005
+tr_rs_coord_bh,BULGULAR.md,tr,"6 çift üzerinden \+0,56, BH ([\d,]+)",FROZEN_coordination_test.csv,gene_set=='rfo_raffinose_stachyose_synthase',p_bh_within_family,value,0.0005
+tr_armximp,BULGULAR.md,tr,"kolun \*\*tersine\*\*\s*gidiyor \(−0,33, merkezin 3,9 boş sd altında, BH ([\d,]+)\)",FROZEN_coordination_between_sets.csv,set_b=='inositol_monophosphatase',p_bh_within_family,value,0.0005
+tr_moon_n,BULGULAR.md,tr,5\.681 meta-DEG'in\s*([\d.]+).sı burada ölçülebilir,FROZEN_moon_metaDEG_summary.csv,subset=='all testable meta-DEGs',n,count,0
+tr_subgroup_sig,BULGULAR.md,tr,20\.926 genin ([\d.]+).ı\s*yöntemler arasında,FROZEN_subgroup_stress_method.csv,padj_between<0.05,gene,rows,0
+tr_metareg_n,BULGULAR.md,tr,meta-regresyon ([\d.]+) genin hiçbirinde,FROZEN_metaregression_duration.csv,,gene,rows,0

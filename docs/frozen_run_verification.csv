@@ -1,0 +1,72 @@
+quantity,frozen_run,previously_reported,agrees,note
+leaf primary strata,14,14,yes,
+leaf primary control libraries,72,72,yes,
+leaf primary drought libraries,79,79,yes,
+estimand classes (conc/base/unres),21/5/5,21/5/5,yes,
+genes pooled,22203,22203,yes,
+genes FDR<0.05,976,976,yes,
+median I2 (%),80.8,80.8,yes,
+RFO genes at genome-wide FDR<0.05 (of 11),4,4,yes,
+gene-set mean log2FC,1.578,1.578,yes,
+gene-set null mean,-0.018,-0.018,yes,
+gene-set null sd,0.159,0.159,yes,
+gene-set draws as extreme,0,0,yes,
+GT8 control mean,-0.027,-0.027,yes,
+GT8 control p,0.9175,0.9175 (reported rounded to 0.918),yes,Flagged on a first pass only because the frozen value was rounded to three decimals (0.917) and compared against a two-decimal report (0.918); both are the same 0.9175.
+genes at FDR<0.05 under HKSJ,0,0,yes,
+smallest BH under HKSJ,0.42,n/a (19-stratum: 0.094),yes,
+genes at FDR<0.05 under Paule-Mandel,8,n/a (19-stratum: 3664),yes,
+"SL panel p, A_GR24_vs_control_wt",0.9544,0.9544,yes,
+"SL panel p, B_SLdepleted_vs_wt_control",0.3897,0.3897,yes,
+"SL panel p, C1_recovery1_wt",0.0673,0.0673,yes,
+"SL panel p, C2_recovery2_wt",0.0011,0.0011,yes,
+GR24 panel genes at FDR<0.05,7,7,yes,
+GR24 genes altered,5624,5624,yes,
+Moon meta-DEG Pearson r,0.635,0.635,yes,
+Moon direction agreement (%),77.7,77.7,yes,
+Moon core agreement (%),92.3,92.3,yes,
+"galactinol synthase step, leaf",+1.82,+1.82,yes,new in frozen run 2
+galactinol synthase step BH,0.0005,0.0005,yes,new in frozen run 2
+"raffinose/stachyose step, leaf",+1.33,+1.33,yes,new in frozen run 2
+"alpha-galactosidase step, leaf",+0.41,+0.41,yes,new in frozen run 2
+alpha-galactosidase step BH,0.040,0.040,yes,new in frozen run 2
+myo-inositol monophosphatase step,-0.20,-0.20,yes,new in frozen run 2
+root cohort strata,3,3,yes,new in frozen run 2
+root cohort genes,"21,516","21,516",yes,new in frozen run 2
+root cohort FDR<0.05,263,263,yes,new in frozen run 2
+root cohort median I2,71%,71%,yes,new in frozen run 2
+root biosynthetic arm mean,+2.16,+2.16,yes,new in frozen run 2
+root biosynthetic arm null SD,6.9,6.9,yes,new in frozen run 2
+root GT8 control,-0.42,-0.42,yes,new in frozen run 2
+root RS/STS step,+2.99,+2.99,yes,new in frozen run 2
+root GolS step,+1.06,+1.06,yes,new in frozen run 2
+root LOO weakest refit,+0.95,+0.95,yes,new in frozen run 2
+leaf strata positive for the arm,11 of 14,11 of 14,yes,new in frozen run 2
+biosynthetic arm mean pairwise r,+0.55,+0.55,yes,new in frozen run 4
+arm coordination null SD units,7.1,7.1,yes,new in frozen run 4
+GT8 control coordination,+0.17,+0.17,yes,new in frozen run 4
+galactinol synthase coordination,+0.62,+0.62,yes,new in frozen run 4
+raffinose/stachyose coordination,+0.49,+0.49,yes,new in frozen run 4
+alpha-galactosidase coordination,+0.06,+0.06,yes,new in frozen run 4
+MIPS coordination,+0.72,+0.72,yes,new in frozen run 4
+IMP coordination,+0.43,+0.43,yes,new in frozen run 4
+arm x alpha-galactosidase,+0.27,+0.27,yes,new in frozen run 4
+arm x MIPS,+0.16,+0.16,yes,new in frozen run 4
+arm x IMP,-0.34,-0.34,yes,new in frozen run 4
+arm x IMP null SD units,-4.5,-4.5,yes,new in frozen run 4
+GolS x RS/STS coupling r,+0.551,+0.551,yes,new in frozen run 5
+GolS x RS/STS pairs,16,16,yes,new in frozen run 5
+GolS x RS/STS null SD units,5.2,5.2,yes,new in frozen run 5
+GolS x RS/STS BH,0.0002,0.0002,yes,new in frozen run 5
+arm inter-gene r,0.55,0.55,yes,new in frozen run 6
+arm VIF,4.86,4.86,yes,new in frozen run 6
+arm corrected null SD units,4.55,4.55,yes,new in frozen run 6
+arm corrected p,0.0011,0.0011,yes,new in frozen run 6
+"galactinol synthase step BH, corrected",0.0035,0.0035,yes,new in frozen run 6
+"raffinose/stachyose step BH, corrected",0.0117,0.0117,yes,new in frozen run 6
+"alpha-galactosidase step BH, corrected",0.055,0.055,yes,new in frozen run 6
+root arm VIF,4.04,4.04,yes,new in frozen run 6
+root arm corrected p,0.002,0.002,yes,new in frozen run 6
+root LOO weakest corrected p,0.042,0.042,yes,new in frozen run 6
+manifest tracked files,39,39,yes,new in frozen run 6
+leaf primary strata after classifier fix,14,14,yes,new in frozen run 6

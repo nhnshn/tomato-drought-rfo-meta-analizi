@@ -1,0 +1,25 @@
+stratum,study,sample_id,estimand,design,treatment_class,genotype,subtissue,timepoint
+PRJNA931112__leafshoot,PRJNA931112,SRX19271388,concurrent_control,~genotype + treatment_class,control,Corbarino,leaves,NA
+PRJNA931112__leafshoot,PRJNA931112,SRX19271389,concurrent_control,~genotype + treatment_class,control,Corbarino,leaves,NA
+PRJNA931112__leafshoot,PRJNA931112,SRX19271392,concurrent_control,~genotype + treatment_class,control,Corbarino,leaves,NA
+PRJNA931112__leafshoot,PRJNA931112,SRX19271393,concurrent_control,~genotype + treatment_class,drought,Corbarino,leaves,NA
+PRJNA931112__leafshoot,PRJNA931112,SRX19271394,concurrent_control,~genotype + treatment_class,drought,Corbarino,leaves,NA
+PRJNA931112__leafshoot,PRJNA931112,SRX19271395,concurrent_control,~genotype + treatment_class,drought,Corbarino,leaves,NA
+PRJNA931112__leafshoot,PRJNA931112,SRX19271396,concurrent_control,~genotype + treatment_class,control,Lucariello,leaves,NA
+PRJNA931112__leafshoot,PRJNA931112,SRX19271397,concurrent_control,~genotype + treatment_class,control,Lucariello,leaves,NA
+PRJNA931112__leafshoot,PRJNA931112,SRX19271398,concurrent_control,~genotype + treatment_class,control,Lucariello,leaves,NA
+PRJNA931112__leafshoot,PRJNA931112,SRX19271399,concurrent_control,~genotype + treatment_class,drought,Lucariello,leaves,NA
+PRJNA931112__leafshoot,PRJNA931112,SRX19271390,concurrent_control,~genotype + treatment_class,drought,Lucariello,leaves,NA
+PRJNA931112__leafshoot,PRJNA931112,SRX19271391,concurrent_control,~genotype + treatment_class,drought,Lucariello,leaves,NA
+PRJNA1380757__leafshoot,PRJNA1380757,SRX31487333,concurrent_control,~genotype + treatment_class,control,35S::SlERF26 OE15,leaves,NA
+PRJNA1380757__leafshoot,PRJNA1380757,SRX31487334,concurrent_control,~genotype + treatment_class,control,35S::SlERF26 OE15,leaves,NA
+PRJNA1380757__leafshoot,PRJNA1380757,SRX31487335,concurrent_control,~genotype + treatment_class,drought,M82,leaves,NA
+PRJNA1380757__leafshoot,PRJNA1380757,SRX31487336,concurrent_control,~genotype + treatment_class,drought,M82,leaves,NA
+PRJNA1380757__leafshoot,PRJNA1380757,SRX31487337,concurrent_control,~genotype + treatment_class,control,35S::SlERF26 OE18,leaves,NA
+PRJNA1380757__leafshoot,PRJNA1380757,SRX31487338,concurrent_control,~genotype + treatment_class,control,35S::SlERF26 OE18,leaves,NA
+PRJNA1380757__leafshoot,PRJNA1380757,SRX31487339,concurrent_control,~genotype + treatment_class,control,M82,leaves,NA
+PRJNA1380757__leafshoot,PRJNA1380757,SRX31487340,concurrent_control,~genotype + treatment_class,control,M82,leaves,NA
+PRJNA1380757__leafshoot,PRJNA1380757,SRX31487341,concurrent_control,~genotype + treatment_class,drought,35S::SlERF26 OE15,leaves,NA
+PRJNA1380757__leafshoot,PRJNA1380757,SRX31487342,concurrent_control,~genotype + treatment_class,drought,35S::SlERF26 OE15,leaves,NA
+PRJNA1380757__leafshoot,PRJNA1380757,SRX31487343,concurrent_control,~genotype + treatment_class,drought,35S::SlERF26 OE18,leaves,NA
+PRJNA1380757__leafshoot,PRJNA1380757,SRX31487344,concurrent_control,~genotype + treatment_class,drought,35S::SlERF26 OE18,leaves,NA

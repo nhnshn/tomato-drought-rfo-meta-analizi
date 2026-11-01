@@ -1,0 +1,31 @@
+stratum,study,tissue,stress_method,duration_days,duration_raw,duration_source,duration_confidence,duration_note
+PRJEB83804__leafshoot,PRJEB83804,leafshoot,water_withholding,,water deficit to 11 DAP | water deficit to 13 DAP | water deficit to 6 DAP,publication checked,unresolved,"Sample labels give fruit developmental stage (6/11/13 days after pollination), not time under water deficit; deficit onset not stated. No primary publication."
+PRJNA1125861__leafshoot,PRJNA1125861,leafshoot,water_withholding,6.333333333333333,10 d | 4 d | 5 d,SRA/GEO metadata field,high,
+PRJNA1164923__leafshoot,PRJNA1164923,leafshoot,water_withholding,20.0,20 d,SRA/GEO metadata field,high,
+PRJNA1172730__root,PRJNA1172730,root,deficit_irrigation,,40% field capacity,,,
+PRJNA1283911__leafshoot,PRJNA1283911,leafshoot,water_withholding,7.0,cessation of irrigation,doi:10.1093/jxb/erag054,medium,"Irrigation stopped after 5 weeks of normal growth; terminal leaflets collected once plants lost turgor (RWC 50%). Physiology in the same paper puts turgor loss at ""7 days on average into the drought treatment""; endpoint-defined rather than fixed-clock."
+PRJNA1284635__leafshoot,PRJNA1284635,leafshoot,water_withholding,7.0,7 d (sample code D7),SRA/GEO metadata field,high,
+PRJNA1298269__leafshoot,PRJNA1298269,leafshoot,water_withholding,2.0,unknown,doi:10.1080/15592324.2025.2556982,medium,"Single RNA-seq timepoint: ""Transcriptional and DNA methylation changes in response to drought and ultrasound 2 d after their application""; later timepoints are RT-qPCR only."
+PRJNA1307411__leafshoot,PRJNA1307411,leafshoot,PEG_osmotic,,unknown,publication checked,unresolved,No confirmed publication for this BioProject; PEG exposure time absent from SRA metadata.
+PRJNA1344858__leafshoot,PRJNA1344858,leafshoot,PEG_osmotic,0.125,"12% PEG6000, 3 h",SRA/GEO metadata field,high,
+PRJNA1344858__root,PRJNA1344858,root,PEG_osmotic,0.125,"12% PEG6000, 3 h",SRA/GEO metadata field,high,
+PRJNA1381306__leafshoot,PRJNA1381306,leafshoot,water_withholding,,unknown,publication checked,unresolved,No publication found; no timing field in SRA metadata.
+PRJNA1474446__other,PRJNA1474446,other,soil_drying,,20% soil water content,,,
+PRJNA472702__leafshoot,PRJNA472702,leafshoot,deficit_irrigation,,mild water deficit,publication checked,unresolved,Full text not retrievable (no OA copy); abstract and companion paper describe a season-long mild water deficit with no stated number of days to leaf sampling.
+PRJNA484882__leafshoot,PRJNA484882,leafshoot,water_withholding,1.75,drought (see paper),doi:10.1186/s12870-019-1982-9,high,"Leaf collected after 42 h per treatment (Methods: ""The first fully expanded leaf from the top of the plants was collected with three replicates after 42 h per treatment""); 27-day-old non-irrigated plants treated 42 h."
+PRJNA573482__leafshoot,PRJNA573482,leafshoot,unknown,,unknown,publication checked,unresolved,No publication found; stress method itself unresolved in metadata.
+PRJNA592330__leafshoot,PRJNA592330,leafshoot,water_withholding,,unknown,publication checked,unresolved,"The only linked publication (doi:10.1038/s41598-022-11263-z) reports an Ascophyllum nodosum extract experiment with no drought arm, so it does not document these samples."
+PRJNA624892__leafshoot,PRJNA624892,leafshoot,other,0.1875,drought stress for 3hrs | drought stress for 6hrs,SRA/GEO metadata field,high,
+PRJNA635375__leafshoot,PRJNA635375,leafshoot,water_withholding,2.0,1d | 2d | 3d,SRA/GEO metadata field,high,
+PRJNA644865__fruitseed,PRJNA644865,fruitseed,deficit_irrigation,,mild water deficit (fruit 14/21 DAA),,,
+PRJNA644865__leafshoot,PRJNA644865,leafshoot,deficit_irrigation,,mild water deficit (fruit 14/21 DAA),publication checked,unresolved,"Deficit imposed progressively from flowering of the second truss (-25% for one week, then -40% until the end of the experiment); leaves sampled at fruit cell-expansion stage with no stated number of days since onset."
+PRJNA657834__leafshoot,PRJNA657834,leafshoot,water_withholding,,T1 (drought),publication checked,unresolved,Timepoints coded T0/T1/T2 only; no publication (GEO GSE156402 design text gives no durations).
+PRJNA670031__root,PRJNA670031,root,soil_drying,,unknown,,,
+PRJNA734743__root,PRJNA734743,root,water_withholding,10.5,14 d | 7 d,SRA/GEO metadata field,high,
+PRJNA745152__leafshoot,PRJNA745152,leafshoot,water_withholding,12.0,12 d water withheld,SRA/GEO metadata field,high,
+PRJNA746070__floweranther,PRJNA746070,floweranther,water_withholding,,drought stressed (anther stages 1-6),,,
+PRJNA800740__leafshoot,PRJNA800740,leafshoot,water_withholding,8.0,11 days without watering | 5 days without watering | 8 days without watering,SRA/GEO metadata field,high,
+PRJNA853266__fruitseed,PRJNA853266,fruitseed,deficit_irrigation,,water stress at 25% volumetric water content | water stress at 30% volumetric water content | water stress at 35% volumetric water content,,,
+PRJNA853266__leafshoot,PRJNA853266,leafshoot,deficit_irrigation,,water stress at 25% volumetric water content | water stress at 30% volumetric water content | water stress at 35% volumetric water content,publication checked,unresolved,"Full text not retrievable (PMC returns abstract only; no OA PDF). Metadata states stress intensity (25% volumetric water content), not duration."
+PRJNA905675__leafshoot,PRJNA905675,leafshoot,water_withholding,,water deficit (35 d old plants),,,
+PRJNA947261__leafshoot,PRJNA947261,leafshoot,other,0.125,dehydration 2h | dehydration 4h,SRA/GEO metadata field,high,

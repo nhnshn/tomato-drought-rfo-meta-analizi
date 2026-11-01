@@ -1,0 +1,37 @@
+set,family,gene,alternative,n_draws,seed,description
+rfo_biosynthetic,primary,Solyc02g084980,greater,10000,0,galactinol -> raffinose -> stachyose synthase arm
+rfo_biosynthetic,primary,Solyc02g062590,greater,10000,0,galactinol -> raffinose -> stachyose synthase arm
+rfo_biosynthetic,primary,Solyc01g079170,greater,10000,0,galactinol -> raffinose -> stachyose synthase arm
+rfo_biosynthetic,primary,Solyc01g100830,greater,10000,0,galactinol -> raffinose -> stachyose synthase arm
+rfo_biosynthetic,primary,Solyc02g086530,greater,10000,0,galactinol -> raffinose -> stachyose synthase arm
+rfo_biosynthetic,primary,Solyc03g058970,greater,10000,0,galactinol -> raffinose -> stachyose synthase arm
+rfo_biosynthetic,primary,Solyc07g007930,greater,10000,0,galactinol -> raffinose -> stachyose synthase arm
+rfo_biosynthetic,primary,Solyc03g112500,greater,10000,0,galactinol -> raffinose -> stachyose synthase arm
+rfo_biosynthetic,primary,Solyc01g079300,greater,10000,0,galactinol -> raffinose -> stachyose synthase arm
+gt8_control,control,Solyc01g098960,two-sided,4000,1,GT8 distant relative (GAUT/GATL clade) - specificity control
+gt8_control,control,Solyc01g098970,two-sided,4000,1,GT8 distant relative (GAUT/GATL clade) - specificity control
+gt8_control,control,Solyc04g064790,two-sided,4000,1,GT8 distant relative (GAUT/GATL clade) - specificity control
+gt8_control,control,Solyc04g078980,two-sided,4000,1,GT8 distant relative (GAUT/GATL clade) - specificity control
+gt8_control,control,Solyc04g078990,two-sided,4000,1,GT8 distant relative (GAUT/GATL clade) - specificity control
+gt8_control,control,Solyc11g005760,two-sided,4000,1,GT8 distant relative (GAUT/GATL clade) - specificity control
+rfo_galactinol_synthase,subarm,Solyc01g100830,two-sided,10000,0,GolS: UDP-Gal + myo-inositol -> galactinol (committed step)
+rfo_galactinol_synthase,subarm,Solyc02g084980,two-sided,10000,0,GolS: UDP-Gal + myo-inositol -> galactinol (committed step)
+rfo_galactinol_synthase,subarm,Solyc02g062590,two-sided,10000,0,GolS: UDP-Gal + myo-inositol -> galactinol (committed step)
+rfo_galactinol_synthase,subarm,Solyc01g079170,two-sided,10000,0,GolS: UDP-Gal + myo-inositol -> galactinol (committed step)
+rfo_raffinose_stachyose_synthase,subarm,Solyc02g086530,two-sided,10000,0,RS/STS: galactinol -> raffinose -> stachyose
+rfo_raffinose_stachyose_synthase,subarm,Solyc01g079300,two-sided,10000,0,RS/STS: galactinol -> raffinose -> stachyose
+rfo_raffinose_stachyose_synthase,subarm,Solyc03g058970,two-sided,10000,0,RS/STS: galactinol -> raffinose -> stachyose
+rfo_raffinose_stachyose_synthase,subarm,Solyc07g007930,two-sided,10000,0,RS/STS: galactinol -> raffinose -> stachyose
+rfo_raffinose_stachyose_synthase,subarm,Solyc03g112500,two-sided,10000,0,RS/STS: galactinol -> raffinose -> stachyose
+rfo_alpha_galactosidase_catabolic,subarm,Solyc06g050130,two-sided,10000,0,alpha-galactosidases: RFO catabolism
+rfo_alpha_galactosidase_catabolic,subarm,Solyc07g065980,two-sided,10000,0,alpha-galactosidases: RFO catabolism
+rfo_alpha_galactosidase_catabolic,subarm,Solyc05g013720,two-sided,10000,0,alpha-galactosidases: RFO catabolism
+rfo_alpha_galactosidase_catabolic,subarm,Solyc03g019790,two-sided,10000,0,alpha-galactosidases: RFO catabolism
+rfo_alpha_galactosidase_catabolic,subarm,Solyc04g008730,two-sided,10000,0,alpha-galactosidases: RFO catabolism
+inositol_1P_synthase,subarm,Solyc04g054740,two-sided,10000,0,MIPS: glucose-6-P -> myo-inositol-1-P
+inositol_1P_synthase,subarm,Solyc04g050820,two-sided,10000,0,MIPS: glucose-6-P -> myo-inositol-1-P
+inositol_1P_synthase,subarm,Solyc04g050860,two-sided,10000,0,MIPS: glucose-6-P -> myo-inositol-1-P
+inositol_monophosphatase,subarm,Solyc05g051850,two-sided,10000,0,IMP: myo-inositol-1-P -> free myo-inositol (substrate supply to GolS)
+inositol_monophosphatase,subarm,Solyc03g044890,two-sided,10000,0,IMP: myo-inositol-1-P -> free myo-inositol (substrate supply to GolS)
+inositol_monophosphatase,subarm,Solyc11g012410,two-sided,10000,0,IMP: myo-inositol-1-P -> free myo-inositol (substrate supply to GolS)
+inositol_monophosphatase,subarm,Solyc04g014800,two-sided,10000,0,IMP: myo-inositol-1-P -> free myo-inositol (substrate supply to GolS)

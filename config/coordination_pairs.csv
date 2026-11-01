@@ -1,0 +1,5 @@
+set_a,set_b,alternative,n_draws,seed,family,description
+rfo_biosynthetic,rfo_alpha_galactosidase_catabolic,two-sided,10000,0,cross_vs_biosynthetic,does the catabolic step track the arm that carries the response
+rfo_biosynthetic,inositol_1P_synthase,two-sided,10000,0,cross_vs_biosynthetic,does myo-inositol synthesis track the arm
+rfo_biosynthetic,inositol_monophosphatase,two-sided,10000,0,cross_vs_biosynthetic,does myo-inositol release track the arm
+rfo_galactinol_synthase,rfo_raffinose_stachyose_synthase,two-sided,10000,0,within_arm_coupling,are the two halves of the biosynthetic arm coupled to each other
