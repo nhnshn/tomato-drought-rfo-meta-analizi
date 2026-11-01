@@ -48,3 +48,17 @@ tr_armximp,BULGULAR.md,tr,"kolun \*\*tersine\*\*\s*gidiyor \(−0,33, merkezin 3
 tr_moon_n,BULGULAR.md,tr,5\.681 meta-DEG'in\s*([\d.]+).sı burada ölçülebilir,FROZEN_moon_metaDEG_summary.csv,subset=='all testable meta-DEGs',n,count,0
 tr_subgroup_sig,BULGULAR.md,tr,20\.926 genin ([\d.]+).ı\s*yöntemler arasında,FROZEN_subgroup_stress_method.csv,padj_between<0.05,gene,rows,0
 tr_metareg_n,BULGULAR.md,tr,meta-regresyon ([\d.]+) genin hiçbirinde,FROZEN_metaregression_duration.csv,,gene,rows,0
+en_cc_bh10,BMCPB_results_v1.md,en,"scenario's seven sets is ([\d.]+), which does not clear",FROZEN_cohort_conflict_set_level.csv,gene_set=='rfo_biosynthetic' and scenario=='drop_conflicts_plus_shared_biosample',bh_within_scenario,value,0.0006
+en_cc_p10,BMCPB_results_v1.md,en,plus the shared-BioSample stratum \| 10 \| 7 \| ([\d.]+) \|,FROZEN_cohort_conflict_set_level.csv,gene_set=='rfo_biosynthetic' and scenario=='drop_conflicts_plus_shared_biosample',combined_p_up,value,0.0002
+en_cc_g9,BMCPB_results_v1.md,en,"plus the weakest timing evidence \| 9 \| 6 \| [\d.]+ \| [\d.]+ \| [\d,]+ \| (\d+) \|",FROZEN_cohort_conflict_gene_level.csv,scenario=='drop_conflicts_shared_and_timing',n_bh_normal,count,0
+en_lf_obs,BMCPB_results_v1.md,en,"no ceiling all retain ([\d,]+) observations",FROZEN_lfcse_ceiling_sensitivity.csv,max_lfcse==5.0,n_obs,count,0
+en_lf_arm,BMCPB_results_v1.md,en,set mean is \*\*\+([\d.]+) at every ceiling tested,FROZEN_lfcse_ceiling_sensitivity.csv,max_lfcse==5.0,arm_mean_log2FC,value,0.0006
+en_vb_p,BMCPB_results_v1.md,en,"median corrected p of ([\d.]+), with a 95% interval",FROZEN_vif_bootstrap.csv,,p_median,value,0.0002
+en_vb_hi,BMCPB_results_v1.md,en,\*\*([\d.]+) to 0\.0090\*\*,FROZEN_vif_bootstrap.csv,,p_lo,value,0.0002
+en_k13_dm,BMCPB_results_v1.md,en,([\d.]+) when\s*falling genes are likelier to drop out,FROZEN_calibration_summary_k13.csv,scenario=='direction_missing',false_positive_rate,value,0.0002
+tr_cc_bh10,BULGULAR.md,tr,"yedi seti içindeki BH değeri ([\d,]+) ile eşiği",FROZEN_cohort_conflict_set_level.csv,gene_set=='rfo_biosynthetic' and scenario=='drop_conflicts_plus_shared_biosample',bh_within_scenario,value,0.0006
+tr_cc_p10,BULGULAR.md,tr,"\+ ortak BioSample katmanı \| 10 \| 7 \| ([\d,]+) \|",FROZEN_cohort_conflict_set_level.csv,gene_set=='rfo_biosynthetic' and scenario=='drop_conflicts_plus_shared_biosample',combined_p_up,value,0.0002
+tr_lf_obs,BULGULAR.md,tr,aynı ([\d.]+)\s*gözlemi,FROZEN_lfcse_ceiling_sensitivity.csv,max_lfcse==5.0,n_obs,count,0
+tr_lf_arm,BULGULAR.md,tr,"sınanan her tavanda \+([\d,]+)\*\*",FROZEN_lfcse_ceiling_sensitivity.csv,max_lfcse==5.0,arm_mean_log2FC,value,0.0006
+tr_vb_p,BULGULAR.md,tr,"medyan düzeltilmiş p ([\d,]+), %95",FROZEN_vif_bootstrap.csv,,p_median,value,0.0002
+tr_k13_dm,BULGULAR.md,tr,"yöne bağlı ölçülememede ([\d,]+) —",FROZEN_calibration_summary_k13.csv,scenario=='direction_missing',false_positive_rate,value,0.0002
