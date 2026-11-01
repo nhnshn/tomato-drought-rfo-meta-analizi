@@ -284,10 +284,11 @@ prose:
 # effect never shown, and the variance-inflation correction was reported as a point
 # estimate although it moves the p-value by three orders of magnitude.
 robustness:
+	@test -d $(DE)_leaf_primary
 	@test -s $(META)/per_study_effects_long.csv.gz
 	@test -s $(META)/PUBLIC_meta_drought_random_effects.csv
 	$(call log,$(PY) scripts/24_lfcse_sensitivity.py \
-	    --long $(META)/per_study_effects_long.csv.gz --sets config/geneset_sets.csv \
+	    --de $(DE)_leaf_primary --sets config/geneset_sets.csv \
 	    --min-studies $(MIN_STRATA) --out meta_sensitivity)
 	$(call log,$(PY) scripts/25_vif_bootstrap.py \
 	    --meta $(META)/PUBLIC_meta_drought_random_effects.csv \

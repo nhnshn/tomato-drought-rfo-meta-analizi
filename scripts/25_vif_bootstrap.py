@@ -1,20 +1,27 @@
 #!/usr/bin/env python
-"""Uncertainty of the variance-inflation correction itself.
+"""Partial sensitivity of the variance-inflation correction to the strata it is estimated from.
 
-The pathway p-value is produced by widening an expression-matched null by sqrt(VIF),
-with VIF = 1 + (m-1)*rbar. rbar is a point estimate from at most 13 effect values per
-gene pair, and the correction it drives moves the p-value by roughly three orders of
-magnitude. Reporting the corrected p without an interval therefore states a precision
-the data do not support.
+The pathway p-value is produced by widening an expression-matched null by sqrt(VIF), with
+VIF = 1 + (m-1)*rbar. rbar is a point estimate from at most 13 effect values per gene pair,
+and the correction it drives moves the p-value by roughly three orders of magnitude, so
+reporting the corrected p as a single number states a precision the data do not support.
 
-This resamples the strata (the unit the correlations are estimated over) with
-replacement. For each resample it recomputes rbar from the resampled effect matrix,
-the set mean, the expression-matched null and the widened empirical p, and reports
-percentile intervals. The nulls are redrawn inside each resample so the interval
-covers both sources of variation.
+WHAT THIS RESAMPLES, AND WHAT IT HOLDS FIXED. Strata are resampled with replacement; for
+each resample rbar and VIF are recomputed from the resampled effect matrix and the
+expression-matched null is redrawn. The observed set mean and the pooled per-gene effects
+of the background genes are NOT recomputed -- they are read once from the meta table and
+held fixed. The output is therefore a sensitivity distribution over the correlation and
+the inflation factor, conditional on the fitted meta-analysis, and NOT a confidence
+interval for the pathway p-value. A full bootstrap would refit the per-gene effects,
+re-derive set membership and the background, and recompute the test statistic inside every
+resample, and would additionally have to treat the strata that share BioSamples as one
+cluster rather than as independent draws; that is a different and much larger analysis.
 
-The resampling is over strata, not genes: strata are what the meta-analysis treats as
-exchangeable, and a gene bootstrap would break the set membership under test.
+Resampling is over strata rather than genes because strata are the unit the meta-analysis
+treats as exchangeable and a gene bootstrap would break the set membership under test.
+Note that the two strata sharing eight BioSamples are drawn independently here, and a
+stratum drawn twice contributes twice to the minimum-overlap count, both of which make the
+spread somewhat optimistic.
 """
 import argparse, os, sys
 import numpy as np, pandas as pd
@@ -80,13 +87,18 @@ def main():
     q = lambda x: (float(np.percentile(x, 2.5)), float(np.percentile(x, 50)),
                    float(np.percentile(x, 97.5)))
     rl, rm, rh = q(rbars); vl, vm, vh = q(vifs); pl, pm, ph = q(ps)
-    R = pd.DataFrame([dict(gene_set=a.set_name, n_members=len(members),
+    R = pd.DataFrame([dict(gene_set=a.set_name,
+                           quantity="partial sensitivity: correlation and VIF resampled "
+                                    "over strata; meta-effects and set mean held fixed; "
+                                    "not a confidence interval",
+                           n_members=len(members),
                            n_bootstrap=len(ps), n_draws=a.draws, seed=a.seed,
                            rbar_median=rm, rbar_lo=rl, rbar_hi=rh,
                            vif_median=vm, vif_lo=vl, vif_hi=vh,
                            p_median=pm, p_lo=pl, p_hi=ph)])
     R.to_csv(os.path.join(a.out, "PUBLIC_vif_bootstrap.csv"), index=False)
-    print(f"{a.set_name}: {len(members)} members, {len(ps)} stratum bootstraps")
+    print(f"{a.set_name}: {len(members)} members, {len(ps)} stratum resamples")
+    print("  partial sensitivity (meta-effects held fixed), not a confidence interval")
     print(f"  rbar  median {rm:+.3f}  95% [{rl:+.3f}, {rh:+.3f}]")
     print(f"  VIF   median {vm:.2f}   95% [{vl:.2f}, {vh:.2f}]")
     print(f"  p     median {pm:.4f}  95% [{pl:.4f}, {ph:.4f}]")
