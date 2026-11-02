@@ -1,21 +1,76 @@
-# Tomato drought analysis: execution and provenance
+# Tomato drought RNA-seq meta-analysis — RFO / galactinol pathway
 
-This README accompanies the correction overlay for the fourth analysis package. The existing FROZEN tables and old manifest remain historical results; installing changed code does **not** regenerate or validate them. The RNA-seq analyses, eligibility and study-level data are unchanged by this overlay.
+Analysis code for a reproducible meta-analysis of drought response in tomato
+(*Solanum lycopersicum*), focused on the raffinose family oligosaccharide (RFO)
+biosynthetic arm. 63 candidate BioProjects were screened; 27 were reanalysed from raw
+reads (30 strata, 435 libraries), and two were held out as an out-of-sample replication
+cohort.
 
-## Dependencies and inputs
+All reported results come from **one sealed end-to-end run** of commit `b6319cb`, tagged
+`sealed-run-2026-11-01` (2026-11-01, 20:01:59–21:56:36 UTC; 44 tracked files, 61 inputs,
+174 outputs, exit 0).
 
-The conda environment files describe the Python and quantification dependencies; the R interpreter must separately provide `limma` and `edgeR`. Record and check actual versions. Restore the count archive into `matrices`, stripping its first component. For external testing, put the two external-study count matrices into `rep/matrices` and the external design file at `rep/stratum_design.csv`. These paths are the inputs expected by the Makefile, not new biological data. Preserve the original archive and work in an empty directory.
+**This repository holds code only.** The count matrices, the frozen result tables, the
+figures and the run logs are deposited separately at Zenodo under ⟨DOI⟩. The manuscript
+text is not distributed in either place.
 
-## Running
+## Layout
 
-- `make all RSCRIPT=<Rscript>` runs the main workflow and seals its manifest; it does **not** run the calibration, external-cohort, or background-sensitivity targets.
-- `make complete RSCRIPT=<Rscript>` runs `all`, then external-cohort testing, background sensitivity, calibration and a final seal, in that order. The calibration can be time-consuming. An absent R package, external input or other command failure aborts the relevant stage. Run it in a clean working directory; `complete` does not remove stale files automatically.
-- `make currency EXPORT_DIR=<exported-package>` compares exported FROZEN tables and PNG files to files in the working tree. Ad-hoc outputs require a separate check; absence of flagged mismatches does not prove inferential or scientific validity.
+| path | contents |
+|---|---|
+| `Makefile` | the whole pipeline; `make complete` runs every stage and seals the run |
+| `scripts/` | quantification, matrix building, differential expression, meta-analysis, set tests, sensitivity and calibration, figures, prose checker |
+| `config/` | sample sheet, gene-set definitions, genotype arm definitions, prose-claim registry |
+| `docs/RUN_MANIFEST.json` | manifest of the sealed run: per-stage commands, start and end times, exit codes, SHA-256 of every input and output |
 
-Before execution place all inputs in their final locations. The manifest records hashes of code, primary matrices and any external matrices/design present **at start**. The seal checks that these inputs and tracked code still match and records hashes of result files and logs, together with the finish time. Rule logs include a command, timestamps and exit status. The manifest does not establish that a pre-existing file was generated in this run. Preserve the complete logs, environment and original user ZIP alongside the new run; compare regenerated values and PNGs with the manuscript before publication.
+## Reproducing
 
-## Scientific qualification
+The pipeline starts from gene-level count matrices, not FASTQ. Download
+`tomato-drought-count-matrices.tar.gz` from the Zenodo deposit, unpack it so the matrices
+sit under `matrices/`, then:
 
-The 13-stratum primary cohort is a working classification, not a fully verified collection of time-matched and independent biological units. PRJNA1164923 has a conflicting sample label, PRJNA1307411 and PRJNA1381306 have unresolved sampling-time evidence, and PRJNA472702 and PRJNA644865 share BioSamples. Treat exclusions and alternative labels as exploratory sensitivity analyses, preserve the eight-stratum gene coverage rule or transparently mark analyses as unestimable, and retain study-level outputs. Do not infer biological replicate independence from PCA separation. Discovery-panel selection and gene-set testing were not prospectively registered against all prior results.
+```
+make complete
+```
 
-The gene-level DL/normal-z, PM/normal-z and HKSJ summaries report different inferential choices and should remain together. A rescaled gene-resampling null based on across-study correlations is not CAMERA; its p-value is exploratory. The external study GT8 control is not testable in either external study, so it does not constitute clean replication.
+`make complete` chains `all → sensitivity → robustness → out_of_sample →
+background_sensitivity → calibration → seal`. The seal step refuses to finish if any
+tracked code or input file changed while the run was in flight, and writes
+`logs/RUN_MANIFEST.json`. Comparing that manifest against `docs/RUN_MANIFEST.json` is the
+reproduction check.
+
+`make prose` checks every quantitative sentence of the manuscript against the frozen
+tables using the claim registry in `config/prose_claims.csv` (67 claims). It needs the
+manuscript, which is not distributed here, so it cannot be run from a clone; the registry
+is kept because it documents what was checked and against which table and column.
+
+Environment: Python 3.11 with pandas 2.3.3, numpy 2.4.6, scipy 1.17.1, statsmodels 0.15.0,
+matplotlib 3.11.2, pymare 0.0.13; R 4.5.3 with limma 3.68.5, edgeR 4.10.7, statmod 1.5.2.
+Quantification used salmon 2.8.0 (k = 31) against the ITAG4.1 cDNA reference, decoy-free.
+
+## What the analysis finds
+
+The RFO biosynthetic arm (7 testable genes) has a mean pooled log2 fold change of
+**+1.34** across the 13 concurrent-control leaf/shoot strata, against an
+expression-matched background null of −0.32 to +0.37; the variance-inflation-corrected
+empirical p is **0.0028**, and the correlation-aware rotation test combined across strata
+gives **p = 0.00047**. A related glycosyltransferase control set (GT8) sits inside its own
+null (−0.05, p = 0.94).
+
+## Limits the tables do not remove
+
+- Of the 19 testable panel genes, only one galactinol synthase (Solyc02g084980) clears
+  genome-wide FDR; under the HKSJ variance estimator no gene does.
+- Panel, cohort and exclusion decisions were all fixed after the results were seen, so no
+  p-value computed inside this corpus is a calibrated error rate.
+- Sample labels, control harvest times and biological-replicate independence rest on
+  archive metadata and have not been verified against the originating laboratories.
+- The calibration simulation tests specific synthetic conditions; it does not calibrate
+  very small p-values.
+
+## Post-seal note
+
+`config/prose_claims.csv` is the only tracked file that changed after the seal: the claim
+registry can only be written once the prose exists, which is after the run. It enters no
+result. The manifest records its hash at run start (`5ecc71e4499e1aec…`); the version here
+is `88d2f6bf899c9866…`. The other 43 tracked files are byte-identical to the sealed run.
