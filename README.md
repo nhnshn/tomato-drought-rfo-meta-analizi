@@ -11,7 +11,7 @@ All reported results come from **one sealed end-to-end run** of commit `b6319cb`
 174 outputs, exit 0).
 
 **This repository holds code only.** The count matrices, the frozen result tables, the
-figures and the run logs are deposited separately at Zenodo under ⟨DOI⟩. The manuscript
+figures and the run logs are deposited separately at Zenodo under ⟨DOI:10.5281/zenodo.23873311⟩. The manuscript
 text is not distributed in either place.
 
 ## Layout
